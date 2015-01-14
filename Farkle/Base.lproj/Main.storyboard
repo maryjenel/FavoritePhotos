@@ -109,7 +109,7 @@
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="mHN-AH-LxB" userLabel="Tap Gesture Recognizer (5)">
                     <connections>
-                        <action selector="onTapped:" destination="vXZ-lx-hvc" id="bO2-RV-tpS"/>
+                        <action selector="onTapped:" destination="vXZ-lx-hvc" id="cW1-cR-8tK"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="g3s-iE-XFf" userLabel="Tap Gesture Recognizer (6)">
