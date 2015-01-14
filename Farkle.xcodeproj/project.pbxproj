@@ -41,8 +41,8 @@
 		6089764A1A67115B007DAB24 /* FarkleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FarkleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6089764F1A67115B007DAB24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		608976501A67115B007DAB24 /* FarkleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FarkleTests.m; sourceTree = "<group>"; };
-		6089765A1A671414007DAB24 /* DieLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DieLabel.h; sourceTree = "<group>"; };
-		6089765B1A671414007DAB24 /* DieLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DieLabel.m; sourceTree = "<group>"; };
+		6089765A1A671414007DAB24 /* DieLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DieLabel.h; path = ../DieLabel.h; sourceTree = "<group>"; };
+		6089765B1A671414007DAB24 /* DieLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DieLabel.m; path = ../DieLabel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,8 +66,6 @@
 		608976281A671159007DAB24 = {
 			isa = PBXGroup;
 			children = (
-				6089765A1A671414007DAB24 /* DieLabel.h */,
-				6089765B1A671414007DAB24 /* DieLabel.m */,
 				608976331A67115A007DAB24 /* Farkle */,
 				6089764D1A67115B007DAB24 /* FarkleTests */,
 				608976321A67115A007DAB24 /* Products */,
@@ -90,6 +88,8 @@
 				608976391A67115A007DAB24 /* AppDelegate.m */,
 				6089763B1A67115A007DAB24 /* RootViewController.h */,
 				6089763C1A67115A007DAB24 /* RootViewController.m */,
+				6089765A1A671414007DAB24 /* DieLabel.h */,
+				6089765B1A671414007DAB24 /* DieLabel.m */,
 				6089763E1A67115A007DAB24 /* Main.storyboard */,
 				608976411A67115A007DAB24 /* Images.xcassets */,
 				608976431A67115A007DAB24 /* LaunchScreen.xib */,
@@ -418,6 +418,7 @@
 				608976561A67115B007DAB24 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		608976571A67115B007DAB24 /* Build configuration list for PBXNativeTarget "FarkleTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +427,7 @@
 				608976591A67115B007DAB24 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
