@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		608976371A67115A007DAB24 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 608976361A67115A007DAB24 /* main.m */; };
 		6089763A1A67115A007DAB24 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 608976391A67115A007DAB24 /* AppDelegate.m */; };
-		6089763D1A67115A007DAB24 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6089763C1A67115A007DAB24 /* ViewController.m */; };
+		6089763D1A67115A007DAB24 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6089763C1A67115A007DAB24 /* RootViewController.m */; };
 		608976401A67115A007DAB24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6089763E1A67115A007DAB24 /* Main.storyboard */; };
 		608976421A67115A007DAB24 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 608976411A67115A007DAB24 /* Images.xcassets */; };
 		608976451A67115A007DAB24 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 608976431A67115A007DAB24 /* LaunchScreen.xib */; };
 		608976511A67115B007DAB24 /* FarkleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 608976501A67115B007DAB24 /* FarkleTests.m */; };
+		6089765C1A671414007DAB24 /* DieLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6089765B1A671414007DAB24 /* DieLabel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +33,16 @@
 		608976361A67115A007DAB24 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		608976381A67115A007DAB24 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		608976391A67115A007DAB24 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		6089763B1A67115A007DAB24 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		6089763C1A67115A007DAB24 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		6089763B1A67115A007DAB24 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		6089763C1A67115A007DAB24 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		6089763F1A67115A007DAB24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		608976411A67115A007DAB24 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		608976441A67115A007DAB24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		6089764A1A67115B007DAB24 /* FarkleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FarkleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6089764F1A67115B007DAB24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		608976501A67115B007DAB24 /* FarkleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FarkleTests.m; sourceTree = "<group>"; };
+		6089765A1A671414007DAB24 /* DieLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DieLabel.h; sourceTree = "<group>"; };
+		6089765B1A671414007DAB24 /* DieLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DieLabel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,8 @@
 		608976281A671159007DAB24 = {
 			isa = PBXGroup;
 			children = (
+				6089765A1A671414007DAB24 /* DieLabel.h */,
+				6089765B1A671414007DAB24 /* DieLabel.m */,
 				608976331A67115A007DAB24 /* Farkle */,
 				6089764D1A67115B007DAB24 /* FarkleTests */,
 				608976321A67115A007DAB24 /* Products */,
@@ -83,8 +88,8 @@
 			children = (
 				608976381A67115A007DAB24 /* AppDelegate.h */,
 				608976391A67115A007DAB24 /* AppDelegate.m */,
-				6089763B1A67115A007DAB24 /* ViewController.h */,
-				6089763C1A67115A007DAB24 /* ViewController.m */,
+				6089763B1A67115A007DAB24 /* RootViewController.h */,
+				6089763C1A67115A007DAB24 /* RootViewController.m */,
 				6089763E1A67115A007DAB24 /* Main.storyboard */,
 				608976411A67115A007DAB24 /* Images.xcassets */,
 				608976431A67115A007DAB24 /* LaunchScreen.xib */,
@@ -219,9 +224,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6089763D1A67115A007DAB24 /* ViewController.m in Sources */,
+				6089763D1A67115A007DAB24 /* RootViewController.m in Sources */,
 				6089763A1A67115A007DAB24 /* AppDelegate.m in Sources */,
 				608976371A67115A007DAB24 /* main.m in Sources */,
+				6089765C1A671414007DAB24 /* DieLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
