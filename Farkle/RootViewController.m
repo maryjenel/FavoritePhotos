@@ -7,8 +7,12 @@
 //
 
 #import "RootViewController.h"
+#import "DieLabel.h"
 
 @interface RootViewController ()
+
+// A collection of UILabel IBoutlets
+@property (strong, nonatomic) IBOutletCollection(DieLabel) NSArray *dieLabels;
 
 @end
 
@@ -19,9 +23,11 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
-- (IBAction)onTapped:(UITapGestureRecognizer *)sender
+- (IBAction)onRollButtonPressed:(UIButton *)sender
 {
-    
+    for (DieLabel *die in self.dieLabels) {
+        [die roll];
+    }
 }
 
 @end
