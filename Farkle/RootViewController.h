@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  RootViewController.h
 //  Farkle
 //
 //  Created by Yi-Chin Sun on 1/14/15.
