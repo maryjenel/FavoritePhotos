@@ -16,6 +16,7 @@
 {
     int random = arc4random_uniform(6) + 1;
     self.text = [NSString stringWithFormat:@"%i", random];
+    self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:self.text]];
 }
 
 - (IBAction)onLabelTapped:(UITapGestureRecognizer *)sender
