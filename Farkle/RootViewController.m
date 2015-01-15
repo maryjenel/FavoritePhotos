@@ -9,10 +9,11 @@
 #import "RootViewController.h"
 #import "DieLabel.h"
 
-@interface RootViewController ()
+@interface RootViewController () <DieLabelDelegate, UIGestureRecognizerDelegate>
 
 // A collection of UILabel IBoutlets
-@property (strong, nonatomic) IBOutletCollection(DieLabel) NSArray *dieLabels;
+@property (strong, nonatomic) IBOutletCollection(DieLabel) NSArray *dieLabels;@property NSMutableArray *dice;
+@property (weak, nonatomic) IBOutlet DieLabel *labelOne;
 
 @end
 
@@ -20,11 +21,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    for (DieLabel *die in self.dieLabels) {
+        die.delegate = self;
+        die.hidden = NO;
+    }
+
+}
+- (IBAction)onTestTap:(UITapGestureRecognizer *)sender
+{
 }
 
+-(void)dieLabelTapped:(DieLabel *)label
+{
+    [self.dice addObject:label];
+    label.hidden = !label.hidden;
+    
+}
 - (IBAction)onRollButtonPressed:(UIButton *)sender
 {
+    [self.labelOne roll];
     for (DieLabel *die in self.dieLabels) {
         [die roll];
     }
