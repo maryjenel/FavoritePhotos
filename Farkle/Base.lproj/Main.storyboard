@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6724" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
     </dependencies>
     <scenes>
         <!--Root View Controller-->
@@ -131,6 +131,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="playerOneScoreLabel" destination="irL-qv-tNd" id="Zwb-9V-Tu0"/>
+                        <outlet property="playerTwoScoreLabel" destination="HwP-FX-1L6" id="7kX-Cr-BEd"/>
                         <outletCollection property="dieLabels" destination="FfC-x3-bXc" id="liu-Yo-6mw"/>
                         <outletCollection property="dieLabels" destination="h0U-wY-uhd" id="d0g-YF-Ybf"/>
                         <outletCollection property="dieLabels" destination="hS8-h4-CLc" id="s86-fJ-QAX"/>

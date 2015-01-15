@@ -12,7 +12,10 @@
 @interface RootViewController () <DieLabelDelegate, UIGestureRecognizerDelegate>
 
 // A collection of UILabel IBoutlets
-@property (strong, nonatomic) IBOutletCollection(DieLabel) NSArray *dieLabels;@property NSMutableArray *diceArray;
+@property (strong, nonatomic) IBOutletCollection(DieLabel) NSArray *dieLabels;
+@property (weak, nonatomic) IBOutlet UILabel *playerOneScoreLabel;
+@property (weak, nonatomic) IBOutlet UILabel *playerTwoScoreLabel;
+@property NSMutableArray *selectedDiceArray;
 
 
 @end
@@ -21,27 +24,43 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.selectedDiceArray = [[NSMutableArray alloc] init];
     for (DieLabel *die in self.dieLabels) {
         die.delegate = self;
-        die.hidden = NO;
+        die.backgroundColor = [UIColor purpleColor];
     }
 
 }
 
 -(void)dieLabelTapped:(DieLabel *)label
 {
-    [self.diceArray addObject:label];
-    label.highlighted = !label.highlighted;
-
-    
+    // If the label that was tapped has already been selected, deselect it
+    // else select that label
+    if ([self.selectedDiceArray containsObject:label])
+    {
+        [self.selectedDiceArray removeObject:label];
+        label.backgroundColor = [UIColor purpleColor];
+    }
+    else
+    {
+        // Limit the label selection to either 1 or 5 or triples
+        if ([label.text isEqualToString:@"1"] || [label.text isEqualToString:@"5"])
+        {
+            [self.selectedDiceArray addObject:label];
+            label.backgroundColor = [UIColor greenColor];
+        }
+    }
 }
-
 
 - (IBAction)onRollButtonPressed:(UIButton *)sender
 {
-
-    for (DieLabel *die in self.dieLabels) {
-        [die roll];
+    // Rolls all unselected dice
+    for (DieLabel *die in self.dieLabels)
+    {
+        if (![self.selectedDiceArray containsObject:die])
+        {
+            [die roll];
+        }
     }
 
 }
