@@ -12,8 +12,8 @@
 @interface RootViewController () <DieLabelDelegate, UIGestureRecognizerDelegate>
 
 // A collection of UILabel IBoutlets
-@property (strong, nonatomic) IBOutletCollection(DieLabel) NSArray *dieLabels;@property NSMutableArray *dice;
-@property (weak, nonatomic) IBOutlet DieLabel *labelOne;
+@property (strong, nonatomic) IBOutletCollection(DieLabel) NSArray *dieLabels;@property NSMutableArray *diceArray;
+
 
 @end
 
@@ -27,22 +27,23 @@
     }
 
 }
-- (IBAction)onTestTap:(UITapGestureRecognizer *)sender
-{
-}
 
 -(void)dieLabelTapped:(DieLabel *)label
 {
-    [self.dice addObject:label];
-    label.hidden = !label.hidden;
+    [self.diceArray addObject:label];
+    label.highlighted = !label.highlighted;
+
     
 }
+
+
 - (IBAction)onRollButtonPressed:(UIButton *)sender
 {
-    [self.labelOne roll];
+
     for (DieLabel *die in self.dieLabels) {
         [die roll];
     }
+
 }
 
 @end

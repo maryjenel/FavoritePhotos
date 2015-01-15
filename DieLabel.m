@@ -18,13 +18,10 @@
     self.text = [NSString stringWithFormat:@"%i", random];
 }
 
--(IBAction)onTapped:(UITapGestureRecognizer *)sender
+- (IBAction)onLabelTapped:(UITapGestureRecognizer *)sender
 {
-//Get the tap gesture recognizer attached view.
-
     UILabel *label = (UILabel *)sender.view; //casting from UIView to UILabel
     [self.delegate dieLabelTapped:label];
-    
 }
 
 @end
